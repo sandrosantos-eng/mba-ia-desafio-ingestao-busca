@@ -50,7 +50,7 @@ COLLECTION_NAME = os.getenv("COLLECTION_NAME", "desafio_ingestao_busca")
 
 # Modelos do Google (podem ser sobrescritos no .env)
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "models/gemini-embedding-001")
-LLM_MODEL = os.getenv("LLM_MODEL", "gemini-3.6-flash")
+LLM_MODEL = os.getenv("LLM_MODEL", "gemini-3.5-flash-lite")
 
 
 def _conectar_banco():
@@ -73,7 +73,7 @@ def search_prompt(question):
     Passos:
     1. Vetoriza a pergunta e busca os 10 trechos mais relevantes (k=10).
     2. Junta os trechos encontrados no CONTEXTO do prompt.
-    3. Chama a LLM (gpt-4o-mini) e retorna a resposta.
+    3. Chama a LLM (Gemini) e retorna a resposta.
     """
     vector_store = _conectar_banco()
 

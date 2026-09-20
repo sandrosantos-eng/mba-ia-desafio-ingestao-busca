@@ -214,5 +214,5 @@ Digite suas perguntas sobre o documento. Para sair, digite `sair`.
   docker compose up -d
   python src/ingest.py
   ```
-- Os modelos usados são da **camada gratuita** do Google: `gemini-embedding-001` (embeddings) e `gemini-3.6-flash` (respostas). É possível trocá-los pelas variáveis `EMBEDDING_MODEL` e `LLM_MODEL` no `.env`.
+- Os modelos usados são da **camada gratuita** do Google: `gemini-embedding-001` (embeddings) e `gemini-3.5-flash-lite` (respostas). É possível trocá-los pelas variáveis `EMBEDDING_MODEL` e `LLM_MODEL` no `.env`.
 - A ingestão envia os chunks em lotes de 20 com uma pausa entre eles, para respeitar o limite de requisições por minuto da camada gratuita.
